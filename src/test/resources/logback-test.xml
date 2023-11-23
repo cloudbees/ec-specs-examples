@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+  <property name="LOG_ROOT" value="logs/cdro-spec-tests.log" />
+  <appender name="FILE" class="ch.qos.logback.core.FileAppender">
+    <file>${LOG_ROOT}</file>
+    <append>true</append>
+    <encoder class="ch.qos.logback.classic.encoder.PatternLayoutEncoder">
+      <pattern>%-23date{yyyy-MM-dd'T'HH:mm:ss.SSS} | %-5level | %logger{36} | %message%n</pattern>
+    </encoder>
+  </appender>
+  <root level="WARN">
+    <appender-ref ref="FILE"/>
+  </root>
+  <logger name="com.electriccloud" level="DEBUG">
+    <appender-ref ref="FILE"/>
+  </logger>
+</configuration>

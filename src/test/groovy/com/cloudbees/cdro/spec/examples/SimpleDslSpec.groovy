@@ -7,7 +7,7 @@ class SimpleDslSpec extends SpockTestSupport {
     def "creating an application in an existing project"() {
 
         given:
-        def args = [projectName: 'myproj']
+        def args = [projectName: randomize ('myproj')]
         dsl "project args.projectName", args
 
         when:

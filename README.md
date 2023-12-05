@@ -1,4 +1,4 @@
-# ec-specs Examples
+# ec-specs examples
 ec-specs is a specification and acceptance testing framework based on [Spock](https://spockframework.org/) and [CloudBees CD/RO DSL](https://docs.cloudbees.com/docs/cloudbees-cd-api/latest/flow-api/dslabout). This repository includes example specifications for testing sample CloudBees CD/RO releases, pipelines, DSL scripts, etc. Additionally, a Maven [pom.xml](pom.xml) is included for building and running example specifications. 
 
 ## Prerequisites
@@ -8,15 +8,14 @@ ec-specs is a specification and acceptance testing framework based on [Spock](ht
 > **_NOTE:_**  The CloudBees CD/RO server can be running locally, on a remote server, or in a Kubernetes cluster.
 
 
-## Building and running tests
-### Compile
+## Compile tests
 To compile ec-spec, run:
 ```
 mvn compile
 ```
 This command downloads the `com.electriccloud.commander-spec-tests-core.jar` from the [CloudBees repository](https://repo.cloudbees.com/content/repositories/artifacts.cloudbees.com_maven-public-releases).
 
-### Compile and test
+## Run tests
 After you have installed a test instance of CloudBees CD/RO, to run the spec tests:
 
 * For a CloudBees CD/RO server running on a `localhost` with the default password for `admin` user:

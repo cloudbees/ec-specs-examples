@@ -28,7 +28,7 @@ After you have installed a test instance of CloudBees CD/RO, to run the spec tes
   ```
 
 ## Write specification (spec test) classes
-Spock allows you to write specifications that describe expected features exhibited by a system. An ec-specs specification is a Groovy class with a naming pattern `<Something>Spec` that extends from `com.electriccloud.spec.SpockTestSupport`, which extends from `spock.lang.Specification`.
+Spock allows you to write specifications that describe expected features exhibited by a system. An ec-specs specification is a Groovy class with a naming pattern `<YOUR-CUSTOM>Spec` that extends from `com.electriccloud.spec.SpockTestSupport`, which extends from `spock.lang.Specification`.
 
 ### Structure of a simple specification class
 The following is an example of a simple specification class:
@@ -65,7 +65,7 @@ class MySpec extends SpockTestSupport {
 * `MySpec` contains two feature methods:
   * `my dsl works as expected`
   * `another test`
-* Before the feature methods in `MySpec` run, a new session is established for `COMMANDER_USER` on the CloudBees CD/RO test instance  `COMMANDER_SERVER`. 
+* Before the feature methods in `MySpec` run, a new session is established for `COMMANDER_USER` on the CloudBees CD/RO test instance `COMMANDER_SERVER`. 
 * The session is invalidated after completion of all the feature methods in `MySpec`.    
 
 For more details on writing specifications, refer to the example specifications and [Spock](https://spockframework.org/).

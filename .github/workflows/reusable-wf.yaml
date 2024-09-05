@@ -1,0 +1,29 @@
+name: GitHub Actions Demo
+run-name: ${{ github.actor }} is testing out GitHub Actions 🚀
+on:
+  workflow_call:
+    inputs:
+      deploy_env:
+        type: string
+        description: environment to deploy to
+        required: true
+    secrets:
+      env_password:
+        required: true
+jobs:
+  deploy:
+    name: Deploy to ${{ inputs.deploy_env }}
+    environment: ${{ inputs.deploy_env }}
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "🎉 The job was automatically triggered by a ${{ github.event_name }} event."
+      - run: echo " Deploying to env ${{ inputs.deploy_env }}"
+      - run: |
+          echo Password is $PASSWORD
+          if [[ $PASSWORD == "PROD" ]]; then
+            echo "This is the *prod* password!"
+          else
+            echo "This is *not* the prod password!"
+          fi
+        env:
+          PASSWORD: ${{ secrets.env_password }}

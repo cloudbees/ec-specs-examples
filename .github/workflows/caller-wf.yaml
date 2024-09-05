@@ -1,0 +1,21 @@
+name: Deploy Workflow
+
+on:
+  workflow_dispatch:
+
+jobs:
+  deploy_dev:
+    name: Deploy to Dev
+    uses: JCWook/sample-go-app/.github/workflows/reusable-wf.yaml@stem
+    with:
+      deploy_env: dev
+    secrets:
+      env_password: ${{ secrets.ENV_PWD }}
+
+  deploy_prod:
+    name: Deploy to Prod
+    uses: JCWook/sample-go-app/.github/workflows/reusable-wf.yaml@stem
+    with:
+      deploy_env: prod
+    secrets:
+      env_password: ${{ secrets.ENV_PWD }}

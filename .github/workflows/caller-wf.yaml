@@ -11,7 +11,7 @@ jobs:
     name: Deploy to Dev
     uses: JCWook/sample-go-app/.github/workflows/reusable-wf.yaml@stem
     with:
-      deploy_env: dev
+      deploy_env: devtest
     secrets:
       env_password: ${{ secrets.ENV_PWD }}
 

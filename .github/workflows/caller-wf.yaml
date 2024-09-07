@@ -5,7 +5,6 @@ on:
   push:
     branches:
       - "gh_test_ignore"
-
 jobs:
   deploy_dev:
     name: Deploy to Dev

@@ -13,7 +13,7 @@ To compile ec-spec, run:
 mvn compile
 ```
 This command downloads the `com.electriccloud.commander-spec-tests-core.jar` from a CloudBees Maven repository.
-> **_NOTE:_**  If you encounter a `[ERROR] 503 Service Temporarily Unavailable` message while attempting to download the dependencies, it is typically because CloudBees migrated the JAR to a dedicated Maven repository to address security issues. To resovle this issue:
+> **_NOTE:_**  If you encounter a `[ERROR] 503 Service Temporarily Unavailable` message while attempting to download the dependencies, it may be caused by CloudBees migrating the JAR to a dedicated Maven repository to address security issues. To resovle this issue:
 > 1. Run `git pull` on the `ec-specs-examples` repository. This updates the JAR archive path.
 > 2. Follow the instructions to [compile tests](#compile-tests) again.
 > 

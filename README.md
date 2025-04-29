@@ -7,13 +7,18 @@ ec-specs is a specification and acceptance testing framework based on [Spock](ht
 * CloudBees CD/RO v2023.10.0 or higher test environment 
 > **_NOTE:_**  The CloudBees CD/RO server can be running locally, on a remote server, or in a Kubernetes cluster.
 
-
 ## Compile tests
 To compile ec-spec, run:
 ```
 mvn compile
 ```
-This command downloads the `com.electriccloud.commander-spec-tests-core.jar` from the [CloudBees repository](https://repo.cloudbees.com/content/repositories/artifacts.cloudbees.com_maven-public-releases).
+This command downloads the `com.electriccloud.commander-spec-tests-core.jar` from a CloudBees Maven repository.
+> **_NOTE:_**  If you encounter a `[ERROR] 503 Service Temporarily Unavailable` message while attempting to download the dependencies, it may be caused by CloudBees migrating the JAR to a dedicated Maven repository to address security issues. To resovle this issue:
+> 1. Run `git pull` on the `ec-specs-examples` repository. This updates the JAR archive path.
+> 2. Follow the instructions to [compile tests](#compile-tests) again.
+> 
+> This downloads the dependencies again and should resolve the issue.
+
 
 ## Run tests
 After you have installed a test instance of CloudBees CD/RO, to run the spec tests:

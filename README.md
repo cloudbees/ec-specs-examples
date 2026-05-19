@@ -2,7 +2,7 @@
 ec-specs is a specification and acceptance testing framework based on [Spock](https://spockframework.org/) and [CloudBees CD/RO DSL](https://docs.cloudbees.com/docs/cloudbees-cd-api/latest/flow-api/dslabout). This repository includes example specifications for testing sample CloudBees CD/RO releases, pipelines, DSL scripts, etc. Additionally, a Maven [pom.xml](pom.xml) is included for building and running example specifications. 
 
 ## Prerequisites
-* JDK 17 or higher
+* JDK 21 or higher
 * [Maven version 3.8.6 or higher](https://maven.apache.org/download.cgi)
 * CloudBees CD/RO v2023.10.0 or higher test environment 
 > **_NOTE:_**  The CloudBees CD/RO server can be running locally, on a remote server, or in a Kubernetes cluster.
